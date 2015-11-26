@@ -10,23 +10,23 @@ describe 'form page' do
   it 'new form submits content and renders form content' do
     visit new_student_path
 
-    fill_in 'first_name', with: "Lindsey"
-    fill_in 'last_name', with: "Stirling"
+    fill_in 'student_first_name', with: "Lindsey"
+    fill_in 'student_last_name', with: "Stirling"
 
-    click_on "Create student"
+    click_on "Create Student"
 
     expect(page).to have_content("Lindsey")
   end
 
   it 'submitted edit form submits content and renders form content' do
-    let(:edit_student) { FactoryGirl.create(:student) }
+    @edit_student = FactoryGirl.create(:student)
 
-    visit student_path(edit_student)
+    visit edit_student_path(@edit_student)
 
-    fill_in 'first_name', with: "Lindsey"
-    fill_in 'last_name', with: "Stirling"
+    fill_in 'student_first_name', with: "Lindsey"
+    fill_in 'student_last_name', with: "Stirling"
 
-    click_on "Update student"
+    click_on "Update Student"
 
     expect(page).to have_content("Lindsey")
   end
@@ -34,23 +34,23 @@ describe 'form page' do
   it 'creates a record in the database' do
     visit new_student_path
 
-    fill_in 'first_name', with: "Sansa"
-    fill_in 'last_name', with: "Stark"
+    fill_in 'student_first_name', with: "Sansa"
+    fill_in 'student_last_name', with: "Stark"
 
-    click_on "Create student"
+    click_on "Create Student"
 
     expect(Student.last.first_name).to eq("Sansa")
   end
 
   it 'submitted edit form creates a record in the database' do
-    let(:edit_db_student) { FactoryGirl.create(:student) }
+    @edit_db_student = FactoryGirl.create(:student)
 
-    visit student_path(edit_db_student)
+    visit edit_student_path(@edit_db_student)
 
-    fill_in 'first_name', with: "Arya"
-    fill_in 'last_name', with: "Stark"
+    fill_in 'student_first_name', with: "Arya"
+    fill_in 'student_last_name', with: "Stark"
 
-    click_on "Update student"
+    click_on "Update Student"
 
     expect(Student.last.first_name).to eq("Arya")
   end
