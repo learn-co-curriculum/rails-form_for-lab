@@ -19,7 +19,7 @@ describe 'form page' do
   end
 
   it 'submitted edit form submits content and renders form content' do
-    @edit_student = FactoryGirl.create(:student)
+    @edit_student = Student.create(first_name: "Daenerys", last_name: "Targaryen")
 
     visit edit_student_path(@edit_student)
 
@@ -43,7 +43,7 @@ describe 'form page' do
   end
 
   it 'submitted edit form creates a record in the database' do
-    @edit_db_student = FactoryGirl.create(:student)
+    @edit_db_student = Student.create(first_name: "Daenerys", last_name: "Targaryen")
 
     visit edit_student_path(@edit_db_student)
 
@@ -57,7 +57,7 @@ describe 'form page' do
 end
 
 describe 'Show page' do
-  let(:student) { FactoryGirl.create(:student) }
+  let(:student) { Student.create(first_name: "Daenerys", last_name: "Targaryen") }
 
   it 'renders properly' do
     visit student_path(student)
