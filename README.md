@@ -27,7 +27,7 @@ The tests for this application are located in the `spec/controllers/`, `spec/fea
 
 ## Requirements
 
-Utilize the `form_for` methods for all four of the forms and integrate each `form_for` call with the respective controller actions. Also make sure to utilize the `<%= f.submit %>` submit button syntax to have the button text automatically generated.
+Utilize the `form_for` methods for all four of the forms (new and edit in `school_classes` and `students`) and integrate each `form_for` call with the respective controller actions. Also make sure to utilize the `<%= f.submit %>` submit button syntax to have the button text automatically generated.
 
 Since you're using `form_for`, make sure you are using strong parameters for the controller `create` and `update` actions, if you don't remember how to do it, here is how we implemented strong params in the README: `@post.update(params.require(:post).permit(:title, :description))`. (hint: you can pass the strong parameter call to the `new` method just like we did on `update`)
 
@@ -40,3 +40,5 @@ If you run into issues drawing the routes, inspect element on the forms to see w
 
 * [Documentation](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html)
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-form_for-lab' title='form_for Lab'>form_for Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/rails-form_for-lab'>form_for lab </a> on Learn.co and start learning to code for free.</p>
