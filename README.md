@@ -14,7 +14,7 @@ For this lab you will be extending the functionality of the Flatiron school's st
 
 Below is what will be needed for each component of the MVC structure:
 
-* **Models** - Create a `SchoolClass` model, along its associated database table. The `SchoolClass` table should have the columns: `title:string` and `room_number:integer`. The `Student` model and database table have already been created for you.
+* **Models** - Create a `SchoolClass` model, along with its associated database table. The `SchoolClass` table should have the columns: `title:string` and `room_number:integer`. The `Student` model and database table have already been created for you.
 
 * **Controllers** - Create controller files for `school_classes` and `students`. Build out the `new`, `create`, `show`, `edit`, and `update` actions in each of the controllers.
 
@@ -40,3 +40,5 @@ If you run into issues drawing the routes, inspect element on the forms to see w
 
 * [Documentation](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html)
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-form_for-lab' title='form_for Lab'>form_for Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/rails-form_for-lab'>form_for lab </a> on Learn.co and start learning to code for free.</p>
