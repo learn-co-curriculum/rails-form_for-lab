@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :school_class do
     title "Computer Science"
     room_number 5
