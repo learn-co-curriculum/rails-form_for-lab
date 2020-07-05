@@ -39,5 +39,3 @@ If you run into issues drawing the routes, navigate to the form in your browser 
 * [Reading](https://github.com/learn-co-curriculum/rails-form_for-on-edit-readme)
 
 * [Documentation](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html)
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/rails-form_for-lab'>form_for lab </a> on Learn.co and start learning to code for free.</p>
