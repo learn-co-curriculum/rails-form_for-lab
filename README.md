@@ -1,4 +1,4 @@
-# `form_for` Lab
+# Using form_for Lab
 
 ## Objectives
 
