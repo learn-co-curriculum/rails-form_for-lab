@@ -46,3 +46,1155 @@ Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
   [1m[35mSQL (0.6ms)[0m  DELETE FROM "students" WHERE "students"."id" = ?  [["id", 2]]
   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
   [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+Started GET "/" for 127.0.0.1 at 2024-08-09 12:01:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-08-09 16:01:55.522598"], ["updated_at", "2024-08-09 16:01:55.522598"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (20240809160426)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240809160426"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2024-08-09 12:10:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2024-08-09 12:10:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.9) lib/rack/method_override.rb:24:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.9) lib/rack/handler/webrick.rb:95:in `service'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/httpserver.rb:140:in `service'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/httpserver.rb:96:in `run'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.4ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.8ms)
+Started GET "/students/1" for 127.0.0.1 at 2024-08-09 12:10:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/students/1"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.9) lib/rack/method_override.rb:24:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.9) lib/rack/handler/webrick.rb:95:in `service'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/httpserver.rb:140:in `service'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/httpserver.rb:96:in `run'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.1ms)
+Started GET "/students/1" for 127.0.0.1 at 2024-08-09 12:11:43 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2024-08-09 12:11:59 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:12:05 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:18:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.7ms)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:18:47 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:18:53 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (0.5ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:21:22 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (3.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/yuriy.ivanenko/Development/code/phase-4/rails-form_for-lab/app/views/school_classes/new.html.erb:8: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/school_classes/new.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.4ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.3ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.0ms)
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:21:36 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (3.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>school_classes#new</h1>
+    2: 
+    3: <%= form_for @school_class do |f| %>
+    4:   <% f.label :title %>
+    5: <% end %>
+  
+app/views/school_classes/new.html.erb:3:in `_app_views_school_classes_new_html_erb__3273125549719070854_15300'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.9ms)
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:22:01 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (1.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>school_classes#new</h1>
+    2: 
+    3: <%= form_for @school_class do |f| %>
+    4:   <% f.label :title %>
+    5: <% end %>
+  
+app/views/school_classes/new.html.erb:3:in `_app_views_school_classes_new_html_erb__3273125549719070854_15780'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:22:40 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>school_classes#new</h1>
+    2: 
+    3: <%= form_for @schoolClass do |f| %>
+    4:   <% f.label :title %>
+    5: <% end %>
+  
+app/views/school_classes/new.html.erb:3:in `_app_views_school_classes_new_html_erb__3273125549719070854_16280'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.8ms)
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:24:00 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (2.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>school_classes#new</h1>
+    2: 
+    3: <%= form_for @school_class do |f| %>
+    4:   <div>
+    5:     <%= f.label :title %>
+    6:     <%= f.text_field :title %>
+  
+app/views/school_classes/new.html.erb:3:in `_app_views_school_classes_new_html_erb__3273125549719070854_16780'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.3ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:24:53 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (14.7ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:25:33 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (4.9ms)
+Completed 200 OK in 26ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:25:51 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (3.4ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:26:00 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (1.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/yuriy.ivanenko/Development/code/phase-4/rails-form_for-lab/app/views/school_classes/new.html.erb:12: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+...r.append=( f.submit, "Submit" );@output_buffer.safe_append='
+...                              ^
+/Users/yuriy.ivanenko/Development/code/phase-4/rails-form_for-lab/app/views/school_classes/new.html.erb:13: syntax error, unexpected `end', expecting ')'
+'.freeze; end 
+          ^~~
+/Users/yuriy.ivanenko/Development/code/phase-4/rails-form_for-lab/app/views/school_classes/new.html.erb:15: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/yuriy.ivanenko/Development/code/phase-4/rails-form_for-lab/app/views/school_classes/new.html.erb:17: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/school_classes/new.html.erb:12: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/school_classes/new.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/school_classes/new.html.erb:15: syntax error, unexpected `ensure', expecting ')'
+app/views/school_classes/new.html.erb:17: syntax error, unexpected `end', expecting ')'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.1ms)
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:26:06 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (1.5ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/new" for 127.0.0.1 at 2024-08-09 12:29:22 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (2.3ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/school_classes" for 127.0.0.1 at 2024-08-09 12:29:29 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JBpC3akR25HYulUhXGMy3dIEoIVRxGdV72rUXQz+O5rjllEHvJ4SgDSA4wCtIdnwkO5qmzHcyT1MwJgtsplWbw==", "school_class"=>{"title"=>"Accounting", "room_number"=>"100"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Accounting"], ["room_number", 100], ["created_at", "2024-08-09 16:29:29.923953"], ["updated_at", "2024-08-09 16:29:29.923953"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:29:29 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:30:34 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.6ms)
+Completed 200 OK in 11ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:31:22 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.6ms)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2024-08-09 12:32:41 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb
+  Rendered students/new.html.erb (1.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>students#new</h1>
+    2: 
+    3: <%= form_for @student do |f| %>
+    4:   <div>
+    5:     <%= f.label :title %>
+    6:     <%= f.text_field :title %>
+  
+app/views/students/new.html.erb:3:in `_app_views_students_new_html_erb__1521996152338072267_30840'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.2ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.3ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.0ms)
+Started GET "/students/new" for 127.0.0.1 at 2024-08-09 12:32:51 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb
+  Rendered students/new.html.erb (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>students#new</h1>
+    2: 
+    3: <%= form_for @student do |f| %>
+    4:   <div>
+    5:     <%= f.label :title %>
+    6:     <%= f.text_field :title %>
+  
+app/views/students/new.html.erb:3:in `_app_views_students_new_html_erb__1521996152338072267_33560'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.5ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+Started GET "/students/new" for 127.0.0.1 at 2024-08-09 12:33:11 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb
+  Rendered students/new.html.erb (6.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Student:0x0000000147526730>):
+    3: <%= form_for @student do |f| %>
+    4:   <div>
+    5:     <%= f.label :title %>
+    6:     <%= f.text_field :title %>
+    7:   </div>
+    8:   <div>
+    9:     <%= f.label :room_number %>
+  
+app/views/students/new.html.erb:6:in `block in _app_views_students_new_html_erb__1521996152338072267_36340'
+app/views/students/new.html.erb:3:in `_app_views_students_new_html_erb__1521996152338072267_36340'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.4ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.2ms)
+Started GET "/students/new" for 127.0.0.1 at 2024-08-09 12:33:42 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb
+  Rendered students/new.html.erb (4.9ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2024-08-09 12:36:13 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cB3r/lJH0Qiz6rOomumDo3Af42dq6hjtz5S1wRhPAsO3kfgkR8gYGV/QBYlrq2iOMvUpeQrytoVsPvmxpihvNg==", "student"=>{"first_name"=>"Yuriy", "last_name"=>"Ivanenko"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Yuriy"], ["last_name", "Ivanenko"], ["created_at", "2024-08-09 16:36:13.864028"], ["updated_at", "2024-08-09 16:36:13.864028"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 10ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2024-08-09 12:36:13 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2024-08-09 12:36:48 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.9ms)
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2024-08-09 12:38:55 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (1.7ms)
+Completed 200 OK in 8ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2024-08-09 12:40:53 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (2.3ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/students/3" for 127.0.0.1 at 2024-08-09 12:41:01 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6SYsGdk6dRiqgA1h+h+QlC8aex3+oD/RAQ6bIDa0k84uqj/DzLW8CUa6u0ALXXu5bfCxA564kbmipNdQiNP+Ow==", "student"=>{"first_name"=>"Yuri", "last_name"=>"Ivanenko"}, "commit"=>"Submit", "id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/students_controller.rb:20:in `update'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.2ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.2ms)
+Started GET "/students/3" for 127.0.0.1 at 2024-08-09 12:41:55 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.9ms)
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2024-08-09 12:42:00 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (2.8ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/students/3" for 127.0.0.1 at 2024-08-09 12:42:17 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h+02bJSZLfuynIqnJkvz8PR/4NhLLVN6BN8a9aG3CaFAYSW2gRbk6l6mPIbXCRjdtpUqxis1/RKndVaFH9BkVA==", "student"=>{"first_name"=>"Yuri", "last_name"=>"Ivanenko"}, "commit"=>"Submit", "id"=>"3"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/students_controller.rb:20:in `update'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.1ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.1ms)
+Started GET "/students/3/edit" for 127.0.0.1 at 2024-08-09 12:43:06 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (1.8ms)
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/students/3" for 127.0.0.1 at 2024-08-09 12:43:08 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5OKgFePvEFxfGx2nWdVxBC4YZMUgOCzcKmvTevx8588jbrPP9mDZTbMhq4aol5opbPKu20AggrSJwZ8KQhuKOg==", "student"=>{"first_name"=>"Yuriy", "last_name"=>"Ivanenko"}, "commit"=>"Submit", "id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/students_controller.rb:20:in `update'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.3ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.2ms)
+Started GET "/students/3/edit" for 127.0.0.1 at 2024-08-09 12:44:48 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (1.9ms)
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/students/3" for 127.0.0.1 at 2024-08-09 12:44:50 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rrOIqnPR8EyZ2zUW66Kt9GOKUq+uHvnvW4L+XLL31NlpP5twZl45XXXhgzca4EbZIWCYsc4GV4f4KLIsDJC5LA==", "student"=>{"first_name"=>"Yuriy", "last_name"=>"Ivanenko"}, "commit"=>"Submit", "id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/students_controller.rb:20:in `update'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.2ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.1ms)
+Started PATCH "/students/3" for 127.0.0.1 at 2024-08-09 12:46:51 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rrOIqnPR8EyZ2zUW66Kt9GOKUq+uHvnvW4L+XLL31NlpP5twZl45XXXhgzca4EbZIWCYsc4GV4f4KLIsDJC5LA==", "student"=>{"first_name"=>"Yuriy", "last_name"=>"Ivanenko"}, "commit"=>"Submit", "id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/students_controller.rb:20:in `update'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.0ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (7.8ms)
+Started GET "/students/3" for 127.0.0.1 at 2024-08-09 12:46:56 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 2.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2024-08-09 12:46:59 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (1.9ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/students/3" for 127.0.0.1 at 2024-08-09 12:47:01 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X666B90CwD/ols4kxTpFi7RvmEoZO0IKw0kITd8Yoa2YIqndyI0JLgSseAU0eK6m9oVSVHkj7GJg40Q9YX/MWA==", "student"=>{"first_name"=>"Yuriy", "last_name"=>"Ivanenko"}, "commit"=>"Submit", "id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/students_controller.rb:20:in `update'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.0ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.9ms)
+Started GET "/students/3" for 127.0.0.1 at 2024-08-09 12:48:40 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (1.0ms)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2024-08-09 12:48:45 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (3.1ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/2/edit" for 127.0.0.1 at 2024-08-09 12:49:51 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=2):
+  
+app/controllers/students_controller.rb:16:in `edit'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.1ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (8.5ms)
+Started GET "/students/1/edit" for 127.0.0.1 at 2024-08-09 12:49:58 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (1.8ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2024-08-09 12:52:13 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.5ms)
+Completed 200 OK in 10ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2024-08-09 12:52:16 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (3.2ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/students/3" for 127.0.0.1 at 2024-08-09 12:52:20 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jz/khJtefhN4xn7EUkHiFOR6g5np9CU3d/P2mJKKBings/dejtG3ApT8yOWjAwk5ppBJh4nsi1/UWbroLO1r3A==", "student"=>{"first_name"=>"Yuri", "last_name"=>"Ivanenko"}, "commit"=>"Submit", "id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "students" SET "first_name" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["first_name", "Yuri"], ["updated_at", "2024-08-09 16:52:20.091880"], ["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2024-08-09 12:52:20 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/" for 127.0.0.1 at 2024-08-09 12:56:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/school_classes"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.9) lib/rack/method_override.rb:24:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.9) lib/rack/handler/webrick.rb:95:in `service'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/httpserver.rb:140:in `service'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/httpserver.rb:96:in `run'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered collection of /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [13 times] (2.3ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.5ms)
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:56:17 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 1.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/school_classes/1/edit" for 127.0.0.1 at 2024-08-09 12:56:21 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/school_classes/1/edit" for 127.0.0.1 at 2024-08-09 12:56:38 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (4.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<SchoolClass:0x000000014755c538>):
+    3: <%= form_for @school_class do |f| %>
+    4:   <div>
+    5:     <%= f.label :first_name %>c
+    6:     <%= f.text_field :first_name %>
+    7:   </div>
+    8:   <div>
+    9:     <%= f.label :last_name %>
+  
+app/views/school_classes/edit.html.erb:6:in `block in _app_views_school_classes_edit_html_erb__1940038443427398915_70780'
+app/views/school_classes/edit.html.erb:3:in `_app_views_school_classes_edit_html_erb__1940038443427398915_70780'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.2ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.3ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.1ms)
+Started GET "/school_classes/1/edit" for 127.0.0.1 at 2024-08-09 12:57:07 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (9.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<SchoolClass:0x00000001341880a0>):
+    3: <%= form_for @school_class do |f| %>
+    4:   <div>
+    5:     <%= f.label :first_name %>c
+    6:     <%= f.text_field :first_name %>
+    7:   </div>
+    8:   <div>
+    9:     <%= f.label :last_name %>
+  
+app/views/school_classes/edit.html.erb:6:in `block in _app_views_school_classes_edit_html_erb__1940038443427398915_71260'
+app/views/school_classes/edit.html.erb:3:in `_app_views_school_classes_edit_html_erb__1940038443427398915_71260'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.4ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.3ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.1ms)
+Started GET "/school_classes/1/edit" for 127.0.0.1 at 2024-08-09 12:57:12 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (6.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<SchoolClass:0x000000015706f420>):
+    3: <%= form_for @school_class do |f| %>
+    4:   <div>
+    5:     <%= f.label :first_name %>c
+    6:     <%= f.text_field :first_name %>
+    7:   </div>
+    8:   <div>
+    9:     <%= f.label :last_name %>
+  
+app/views/school_classes/edit.html.erb:6:in `block in _app_views_school_classes_edit_html_erb__1940038443427398915_71740'
+app/views/school_classes/edit.html.erb:3:in `_app_views_school_classes_edit_html_erb__1940038443427398915_71740'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.6ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.2ms)
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:57:15 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1/edit" for 127.0.0.1 at 2024-08-09 12:57:18 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (7.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<SchoolClass:0x00000001586fe268>):
+    3: <%= form_for @school_class do |f| %>
+    4:   <div>
+    5:     <%= f.label :first_name %>c
+    6:     <%= f.text_field :first_name %>
+    7:   </div>
+    8:   <div>
+    9:     <%= f.label :last_name %>
+  
+app/views/school_classes/edit.html.erb:6:in `block in _app_views_school_classes_edit_html_erb__1940038443427398915_72600'
+app/views/school_classes/edit.html.erb:3:in `_app_views_school_classes_edit_html_erb__1940038443427398915_72600'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.3ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+Started GET "/school_classes/1/edit" for 127.0.0.1 at 2024-08-09 12:58:15 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.5ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (3.5ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:58:20 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EjAG0S5dNecVHD5/e/61czWDcJoEar53Uo7zPrYAcJPVvBULO9L89vkmiF6KvF5ed2m6hGRyEB/xJL9OCGcdZg==", "school_class"=>{"title"=>"Accounting", "room_number"=>"101"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: title, room_number
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `school_class' for #<SchoolClassesController:0x000000013282c160>
+Did you mean?  school_class_url):
+  
+app/controllers/school_classes_controller.rb:23:in `update'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.3ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.9ms)
+Started PATCH "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:58:58 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EjAG0S5dNecVHD5/e/61czWDcJoEar53Uo7zPrYAcJPVvBULO9L89vkmiF6KvF5ed2m6hGRyEB/xJL9OCGcdZg==", "school_class"=>{"title"=>"Accounting", "room_number"=>"101"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: title, room_number
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `school_class' for #<SchoolClassesController:0x0000000130036638>
+Did you mean?  school_class_url):
+  
+app/controllers/school_classes_controller.rb:23:in `update'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.8ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.4ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (7.6ms)
+Started PATCH "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:59:50 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EjAG0S5dNecVHD5/e/61czWDcJoEar53Uo7zPrYAcJPVvBULO9L89vkmiF6KvF5ed2m6hGRyEB/xJL9OCGcdZg==", "school_class"=>{"title"=>"Accounting", "room_number"=>"101"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: title, room_number
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:59:50 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:59:55 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EjAG0S5dNecVHD5/e/61czWDcJoEar53Uo7zPrYAcJPVvBULO9L89vkmiF6KvF5ed2m6hGRyEB/xJL9OCGcdZg==", "school_class"=>{"title"=>"Accounting", "room_number"=>"101"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: title, room_number
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:59:55 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 12:59:58 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1/edit" for 127.0.0.1 at 2024-08-09 13:00:02 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/school_classes/1" for 127.0.0.1 at 2024-08-09 13:00:06 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJcdKJ2Fv5I5xLJpddvPeKo24N7NHJOfiAcFMpyg6WuLGw7yiAp2g9X+BEiEmSRV6NwqwK0EPfcrrUlCIseEng==", "school_class"=>{"title"=>"Accounting", "room_number"=>"101"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: title, room_number
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 13:00:06 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.6ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/1" for 127.0.0.1 at 2024-08-09 13:00:27 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJcdKJ2Fv5I5xLJpddvPeKo24N7NHJOfiAcFMpyg6WuLGw7yiAp2g9X+BEiEmSRV6NwqwK0EPfcrrUlCIseEng==", "school_class"=>{"title"=>"Accounting", "room_number"=>"101"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "school_classes" SET "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", 101], ["updated_at", "2024-08-09 17:00:27.558447"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 20ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 13:00:27 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/1/edit" for 127.0.0.1 at 2024-08-09 13:02:34 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (1.8ms)
+Completed 200 OK in 10ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/school_classes/1" for 127.0.0.1 at 2024-08-09 13:02:42 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gamt6FxLWugOV2kYr0dSAHmlxcmFsxDVIcp/7GFrHuveJb4yScST+eJt3zleBbktO08P1+Wrvr2CYDOc3wxzHg==", "school_class"=>{"title"=>"Accounting", "room_number"=>"200"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "school_classes" SET "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", 200], ["updated_at", "2024-08-09 17:02:42.812381"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 13:02:42 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.6ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 13:02:52 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/school_classes/" for 127.0.0.1 at 2024-08-09 13:02:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/school_classes"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.9) lib/rack/method_override.rb:24:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.9) lib/rack/handler/webrick.rb:95:in `service'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/httpserver.rb:140:in `service'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/httpserver.rb:96:in `run'
+/Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/2.7.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (2.0ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.6ms)
+  Rendering /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/yuriy.ivanenko/.asdf/installs/ruby/2.7.7/lib/ruby/gems/2.7.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.0ms)
+Started GET "/school_classes/1" for 127.0.0.1 at 2024-08-09 13:02:59 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
